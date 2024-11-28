@@ -11,23 +11,11 @@
    <!-- 生成的war文件名 避免添加版本号 -->
     <finalName>easy-springmvc-maven</finalName>
     <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-      <plugin> 
-      <artifactId>maven-war-plugin</artifactId> 
-        <configuration> 
-        <version>3.0 </version> 
-        <!-- maven的web项目默认的webroot是在src\main\webapp。如果在此目录下找不到web.xml就抛出webxml attribute is required的异常 -->
-        <!-- 需要在pom.xml中增加<webXml>配置 -->
-        <!-- <webXml>WebContent\WEB-INF\web.xml</webXml> -->
-        </configuration> 
-       </plugin>
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-war-plugin</artifactId>
+		<version>3.2.2</version>
+	</plugin>
     </plugins>
   </build>
   <dependencies>
